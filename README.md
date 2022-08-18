@@ -1,5 +1,9 @@
-# Medical-Translator
-Project 3 - Medical Translator
+<h1 align="center"> GitPoint </h1> <br>
+<p align="center">
+  <a href="https://github.com/adamwagh512/Medical-Translator/">
+  </a>
+</p>
+
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
