@@ -1,4 +1,4 @@
-<h1 align="center"> GitPoint </h1> <br>
+<h1 align="center"> Medical Translator </h1> <br>
 <p align="center">
   <a href="https://github.com/adamwagh512/Medical-Translator/">
   </a>
