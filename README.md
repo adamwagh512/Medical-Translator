@@ -27,11 +27,11 @@ Project 3 - Medical Translator
 
 
 
+## Getting involved
 
-
-
-
-
+🗨️ **Contact us:**
+Find out more about how to reach us at
+[Medical-Translator-Team](https://github.com/adamwagh512/Medical-Translator).
 
 
 # Team 👏
