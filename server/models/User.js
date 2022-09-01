@@ -10,13 +10,12 @@ const userSchema = new Schema (
             type: String,
             required: true
         },
-        username: {
+        DOB: {
             type: String,
             required: true,
-            unique: true
         },
-        password: {
-            type: String,
+        smoker: {
+            type: Boolean,
             required: true
             
         },
@@ -30,4 +29,4 @@ const userSchema = new Schema (
 
 const User = model ("User", userSchema)
 
-module.exports = User
+module.exports = User;
