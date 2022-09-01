@@ -1,11 +1,13 @@
 const {User, Accounts} = require('../models');
 
 module.exports = {
+  //find all users
   getUsers(req, res) {
     User.find()
       .then((users) => res.json(users))
       .catch((err) => res.status(500).json(err));
   },
+  //find a single user
   getSingleUser(req, res) {
     User.findOne({ _id: req.params.userId })
       .then((user) =>
@@ -15,12 +17,12 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  // // create a new video
+  // // create a new user
   createUser(req, res) {
     User.create(req.body)
       .then((user) => {
         return Accounts.findOneAndUpdate(
-          { _id: req.body._id },
+          { _id: req.body.accountId },
           { $addToSet: { Users: user._id } },
           { new: true }
         );
@@ -37,68 +39,41 @@ module.exports = {
         res.status(500).json(err);
       });
   },
-  // updateVideo(req, res) {
-  //   Video.findOneAndUpdate(
-  //     { _id: req.params.videoId },
-  //     { $set: req.body },
-  //     { runValidators: true, new: true }
-  //   )
-  //     .then((video) =>
-  //       !video
-  //         ? res.status(404).json({ message: 'No video with this id!' })
-  //         : res.json(video)
-  //     )
-  //     .catch((err) => {
-  //       console.log(err);
-  //       res.status(500).json(err);
-  //     });
-  // },
-  // deleteVideo(req, res) {
-  //   Video.findOneAndRemove({ _id: req.params.videoId })
-  //     .then((video) =>
-  //       !video
-  //         ? res.status(404).json({ message: 'No video with this id!' })
-  //         : User.findOneAndUpdate(
-  //             { videos: req.params.videoId },
-  //             { $pull: { videos: req.params.videoId } },
-  //             { new: true }
-  //           )
-  //     )
-  //     .then((user) =>
-  //       !user
-  //         ? res
-  //             .status(404)
-  //             .json({ message: 'Video created but no user with this id!' })
-  //         : res.json({ message: 'Video successfully deleted!' })
-  //     )
-  //     .catch((err) => res.status(500).json(err));
-  // },
-  // // Add a video response
-  // addVideoResponse(req, res) {
-  //   Video.findOneAndUpdate(
-  //     { _id: req.params.videoId },
-  //     { $addToSet: { responses: req.body } },
-  //     { runValidators: true, new: true }
-  //   )
-  //     .then((video) =>
-  //       !video
-  //         ? res.status(404).json({ message: 'No video with this id!' })
-  //         : res.json(video)
-  //     )
-  //     .catch((err) => res.status(500).json(err));
-  // },
-  // // Remove video response
-  // removeVideoResponse(req, res) {
-  //   Video.findOneAndUpdate(
-  //     { _id: req.params.videoId },
-  //     { $pull: { reactions: { responseId: req.params.responseId } } },
-  //     { runValidators: true, new: true }
-  //   )
-  //     .then((video) =>
-  //       !video
-  //         ? res.status(404).json({ message: 'No video with this id!' })
-  //         : res.json(video)
-  //     )
-  //     .catch((err) => res.status(500).json(err));
-  // },
+  //update a user
+  updateUser(req, res) {
+    User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $set: req.body },
+      { runValidators: true, new: true }
+    )
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: 'No user with this id!' })
+          : res.json(user)
+      )
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
+  deleteUser(req, res) {
+    User.findOneAndRemove({ _id: req.params.userId })
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: 'No user with this id!' })
+          : Accounts.findOneAndUpdate(
+              { videos: req.params.userId },
+              { $pull: { videos: req.params.userId } },
+              { new: true }
+            )
+      )
+      .then((account) =>
+        !Accounts
+          ? res
+              .status(404)
+              .json({ message: 'user created but no account with this id!' })
+          : res.json({ message: 'User successfully deleted!' })
+      )
+      .catch((err) => res.status(500).json(err));
+  },
 };
