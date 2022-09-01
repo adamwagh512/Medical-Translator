@@ -16,27 +16,27 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   // // create a new video
-  // createVideo(req, res) {
-  //   Video.create(req.body)
-  //     .then((video) => {
-  //       return User.findOneAndUpdate(
-  //         { _id: req.body.userId },
-  //         { $addToSet: { videos: video._id } },
-  //         { new: true }
-  //       );
-  //     })
-  //     .then((user) =>
-  //       !user
-  //         ? res.status(404).json({
-  //             message: 'Video created, but found no user with that ID',
-  //           })
-  //         : res.json('Created the video 🎉')
-  //     )
-  //     .catch((err) => {
-  //       console.log(err);
-  //       res.status(500).json(err);
-  //     });
-  // },
+  createUser(req, res) {
+    User.create(req.body)
+      .then((user) => {
+        return Accounts.findOneAndUpdate(
+          { _id: req.body._id },
+          { $addToSet: { Users: user._id } },
+          { new: true }
+        );
+      })
+      .then((user) =>
+        !Accounts
+          ? res.status(404).json({
+              message: 'User created, but found no Account with that ID',
+            })
+          : res.json('Created the User')
+      )
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
   // updateVideo(req, res) {
   //   Video.findOneAndUpdate(
   //     { _id: req.params.videoId },

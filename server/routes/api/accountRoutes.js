@@ -13,7 +13,7 @@ router.route('/')
 .post(createAccount);
 
 // /api/accounts/:accountId
-router.route('/:_id')
+router.route('/:accountId')
 .get(getSingleAccount)
 .put(updateAccount)
 .delete(deleteAccount);

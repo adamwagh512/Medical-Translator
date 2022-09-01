@@ -8,7 +8,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   getSingleAccount(req, res) {
-    Account.findOne({ _id: req.params.userId })
+    Account.findOne({ _id: req.params.accountId })
       .select('-__v')
       .then((account) =>
         !user
@@ -25,7 +25,7 @@ module.exports = {
   },
   updateAccount(req, res) {
     Account.findOneAndUpdate(
-      { _id: req.params._id },
+      { _id: req.params.accountId },
       { $set: req.body },
       { runValidators: true, new: true }
     )
