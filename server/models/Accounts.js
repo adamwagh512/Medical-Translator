@@ -11,10 +11,10 @@ const accountSchema = new Schema (
             type: String,
             required: true
         },
-        Users: [
+        users: [
             {
                 type:Schema.Types.ObjectId,
-                ref: 'Users',
+                ref: 'User',
         }
         ],
     },
