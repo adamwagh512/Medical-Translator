@@ -13,6 +13,7 @@ const userSchema = new Schema (
         DOB: {
             type: String,
             required: true,
+
         },
         smoker: {
             type: Boolean,

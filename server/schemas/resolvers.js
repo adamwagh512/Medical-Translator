@@ -1,14 +1,17 @@
-const { User, Account } = require('../models');
+const { User, Accounts } = require('../models');
 
 const resolvers = {
     Query: {
-        User: async () => {
+        Users: async () => {
             return User.find({});
         },
-        Account: async (parent, { _id }) => {
-            const params = _id ? { _id } : {};
-            return Account.find(params);
-        },
+        Account: async () => {
+            return Accounts.find({}).populate('Users');
+        }
+        // Account: async (parent, { _id }) => {
+        //     const params = _id ? { _id } : {};
+        //     return Account.findOn(params);
+        // },
     },
     Mutation: {
         createAccount: async (parent, args) => {
