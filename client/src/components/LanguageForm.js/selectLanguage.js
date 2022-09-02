@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-function selectLanguage (){
-    const [language, setLanguage] = useState('');
+// function selectLanguage (){
+//     const [language, setLanguage] = useState('');
 
 
 
