@@ -1,4 +1,5 @@
 const {Schema, model} = require ("mongoose")
+const Med = require('./Med')
 
 const userSchema = new Schema (
     {
@@ -20,11 +21,18 @@ const userSchema = new Schema (
             required: true
             
         },
+        meds: [
+            {
+                type:Schema.Types.ObjectId,
+                ref: 'Med'
+        }
+        ],
     },
     {
         toJSON: {
             virtuals: true
-        }
+        },
+        
     }   
 )
 

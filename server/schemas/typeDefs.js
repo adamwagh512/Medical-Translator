@@ -12,10 +12,17 @@ const typeDefs = gql`
     lastName: String
     DOB: String
     smoker: Boolean
+    Meds: [Med]
+  }
+  type Med {
+    medName: String
+    dose: Int
+    unit: String
   }
   type Query {
     Users: [User]
     Account: [Account]
+    Meds: [Med]
   }
   type Mutation {
     createAccount(accountId: ID!, email: String!, password: String!): Account
