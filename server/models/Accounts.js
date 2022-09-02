@@ -1,4 +1,5 @@
 const {Schema, model} = require ("mongoose")
+const User = require("./User")
 const Users = require('./User')
 
 const accountSchema = new Schema (
@@ -11,10 +12,10 @@ const accountSchema = new Schema (
             type: String,
             required: true
         },
-        users: [
+        Users: [
             {
                 type:Schema.Types.ObjectId,
-                ref: 'User',
+                ref: 'User'
         }
         ],
     },

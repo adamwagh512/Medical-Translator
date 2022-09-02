@@ -5,16 +5,16 @@ const typeDefs = gql`
     _id: ID
     email: String
     password: String
-    users: [Users]
+    Users: [User]
   }
-  type Users {
+  type User {
     firstName: String
     lastName: String
     DOB: String
     smoker: Boolean
   }
   type Query {
-    User: [Users]
+    Users: [User]
     Account: [Account]
   }
   type Mutation {
