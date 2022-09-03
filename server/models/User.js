@@ -45,6 +45,12 @@ const userSchema = new Schema (
                 type: Schema.Types.ObjectId,
                 ref: 'Physician'
             }
+        ],
+        History: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'History'
+            }
         ]
     },
     {

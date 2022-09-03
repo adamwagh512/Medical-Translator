@@ -1,6 +1,5 @@
 const { User, Accounts, Med, Allergy, History, Contact, Surgery, Physician } = require('../models');
-const Account = require('../models/Accounts');
-const { populate } = require('../models/History');
+
 
 const resolvers = {
     Query: {
@@ -14,13 +13,13 @@ const resolvers = {
         },
         //find all users and populate all the associated meds, allergies for each user
         Users: async () => {
-            return User.find({}).populate('Meds').populate('Allergies').populate('Contact').populate('Physician');
+            return User.find({}).populate('Meds').populate('Allergies').populate('Contact').populate('Physician').populate('History');
         },
         //find all accounts and populate all the associated users for each account
         Account: async () => {
             return Accounts.find({}).populate('Users').populate({
                 path: 'Users',
-                populate:['Meds', 'Allergies', 'Contact', 'Physician'],
+                populate:['Meds', 'Allergies', 'Contact', 'Physician', 'History'],
         //Can populate one or the other, but not both
                 // path: 'Users',
                 // populate:'Allergies'
@@ -86,6 +85,15 @@ const resolvers = {
            return await User.findOneAndUpdate(
                 { _id }, 
                 { $push: { Physician: newPhysician } },
+                {new:true}
+            )
+        },
+        //Create a History item and assign it to user by ID
+        createHistory: async (parent, {issue, _id}) => {
+            const newHistory = await History.create({issue})
+           return await User.findOneAndUpdate(
+                { _id }, 
+                { $push: { History: newHistory } },
                 {new:true}
             )
         },

@@ -72,6 +72,7 @@ const typeDefs = gql`
     createAllergy(allergin: String!, reaction: String!, _id: ID!) : User
     createContact(name: String!, email:String!, phone:String!, _id:ID): User
     createPhysician(name: String!, speciality: String!, email:String!, phone:String!, _id:ID): User
+    createHistory(issue: String!, _id: ID) : User
   }
 `;
 module.exports = typeDefs;
