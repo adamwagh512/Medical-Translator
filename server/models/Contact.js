@@ -6,19 +6,13 @@ const contactSchema = new Schema (
             type: Schema.Types.String,
             required: true
         }, 
-        speciality: {
-            type: Schema.Types.String,
-        }, 
+
         email: {
             type: Schema.Types.String,
         }, 
         phone: {
             type: Schema.Types.String,
         }, 
-        name: {
-            type: Schema.Types.String,
-        }, 
-    
     },
    
 )

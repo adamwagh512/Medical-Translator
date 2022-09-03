@@ -14,11 +14,7 @@ const physicianSchema = new Schema (
         }, 
         phone: {
             type: Schema.Types.String,
-        }, 
-        name: {
-            type: Schema.Types.String,
-        }, 
-    
+        },
     },
    
 )

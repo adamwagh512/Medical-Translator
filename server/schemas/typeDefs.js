@@ -15,6 +15,10 @@ const typeDefs = gql`
     smoker: Boolean
     Meds: [Med]
     Allergies: [Allergy]
+    Contact: [Contact]
+    Physician: [Physician]
+    Surgery: [Surgery]
+    History: [History]
   }
   type Med {
     _id: ID
@@ -27,11 +31,39 @@ const typeDefs = gql`
     allergin: String
     reaction: String
   }
+  type History {
+    _id: ID
+    issue: String
+  }
+  type Contact {
+    _id: ID
+    name: String
+    email: String
+    phone: String
+  }
+  type Physician {
+    _id: ID
+    name: String
+    speciality: String
+    email: String
+    phone: String
+  }
+  type Surgery {
+    _id: ID
+    description: String
+    date: String
+    hospital: String
+    hospitalCity: String
+    surgeon: String
+  }
+
   type Query {
     Users: [User]
     Account: [Account]
     Meds: [Med]
     Allergy: [Allergy]
+    History: [History]
+    Contact: [Contact]
   }
   type Mutation {
     createAccount(accountId: ID!, email: String!, password: String!): Account
