@@ -8,6 +8,7 @@ const typeDefs = gql`
     Users: [User]
   }
   type User {
+    _id: ID
     firstName: String
     lastName: String
     DOB: String
@@ -15,6 +16,7 @@ const typeDefs = gql`
     Meds: [Med]
   }
   type Med {
+    _id: ID
     medName: String
     dose: Int
     unit: String
@@ -26,6 +28,8 @@ const typeDefs = gql`
   }
   type Mutation {
     createAccount(accountId: ID!, email: String!, password: String!): Account
+    createUser(firstName: String!, lastName: String!, DOB: String!, smoker: Boolean!): User
+    createMed(medName: String!, dose: Float!, unit: String!, _id: ID!) : User
   }
 `;
 module.exports = typeDefs;

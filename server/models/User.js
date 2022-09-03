@@ -4,24 +4,24 @@ const Med = require('./Med')
 const userSchema = new Schema (
     {
         firstName: {
-            type: String,
+            type: Schema.Types.String,
             required: true
         }, 
         lastName: {
-            type: String,
+            type: Schema.Types.String,
             required: true
         },
         DOB: {
-            type: String,
+            type: Schema.Types.Date,
             required: true,
 
         },
         smoker: {
-            type: Boolean,
+            type: Schema.Types.Boolean,
             required: true
             
         },
-        meds: [
+        Meds: [
             {
                 type:Schema.Types.ObjectId,
                 ref: 'Med'

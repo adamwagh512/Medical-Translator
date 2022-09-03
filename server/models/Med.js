@@ -7,7 +7,7 @@ const medSchema = new Schema (
             required: true
         }, 
         dose: {
-            type: Number,
+            type: Schema.Types.Number,
             required: true
         },
         unit: {
@@ -19,6 +19,6 @@ const medSchema = new Schema (
    
 )
 
-const Med = model ("med", medSchema)
+const Med = model ("Med", medSchema)
 
 module.exports = Med;
