@@ -73,6 +73,7 @@ const typeDefs = gql`
     createContact(name: String!, email:String!, phone:String!, _id:ID): User
     createPhysician(name: String!, speciality: String!, email:String!, phone:String!, _id:ID): User
     createHistory(issue: String!, _id: ID) : User
+    createSurgery(description: String!, date: String!, hospital: String!, hospitalCity: String!, surgeon: String!, _id: ID) : User
   }
 `;
 module.exports = typeDefs;

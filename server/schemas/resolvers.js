@@ -13,13 +13,15 @@ const resolvers = {
         },
         //find all users and populate all the associated meds, allergies for each user
         Users: async () => {
-            return User.find({}).populate('Meds').populate('Allergies').populate('Contact').populate('Physician').populate('History');
+            return User.find({}).populate(['Meds', 'Allergies','Contact','Physician','History','Surgery'])
+
+            // return User.find({}).populate('Meds').populate('Allergies').populate('Contact').populate('Physician').populate('History').populate('Surgery');
         },
         //find all accounts and populate all the associated users for each account
         Account: async () => {
             return Accounts.find({}).populate('Users').populate({
                 path: 'Users',
-                populate:['Meds', 'Allergies', 'Contact', 'Physician', 'History'],
+                populate:['Meds', 'Allergies', 'Contact', 'Physician', 'History','Surgery'],
         //Can populate one or the other, but not both
                 // path: 'Users',
                 // populate:'Allergies'
@@ -94,6 +96,14 @@ const resolvers = {
            return await User.findOneAndUpdate(
                 { _id }, 
                 { $push: { History: newHistory } },
+                {new:true}
+            )
+        },
+        createSurgery: async (parent, {description, date, hospital, hospitalCity, surgeon, _id}) => {
+            const newSurgery = await Surgery.create({description, date, hospital, hospitalCity, surgeon})
+           return await User.findOneAndUpdate(
+                { _id }, 
+                { $push: { Surgery: newSurgery } },
                 {new:true}
             )
         },
