@@ -42,7 +42,8 @@
 
 ## Building Process
 
-![ezgif com-gif-maker(7)](https://user-images.githubusercontent.com/107494937/188281610-e2c57b89-3866-4d23-89d2-d04fb9e4155a.gif)
+![ezgif com-gif-maker(8)](https://user-images.githubusercontent.com/107494937/188281636-89fb5f77-8dc0-400d-9a7c-2843dea8fc66.gif)
+
 
 
 
