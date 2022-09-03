@@ -40,8 +40,9 @@
 
 
 
+## Building Process
 
-
+![ezgif com-gif-maker(6)](https://user-images.githubusercontent.com/107494937/188281565-605f9ed8-7e3b-4109-8f6b-5637bf4d36d4.gif)
 
 
 
