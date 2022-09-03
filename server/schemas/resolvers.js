@@ -1,4 +1,5 @@
-const { User, Accounts, Med } = require('../models');
+const { User, Accounts, Med, Allergy } = require('../models');
+const Account = require('../models/Accounts');
 
 const resolvers = {
     Query: {
@@ -31,8 +32,13 @@ const resolvers = {
         },
         // User Mutations
         //Create a new user
-        createUser: async (parent, {firstName, lastName, DOB, smoker}) => {
-            return await User.create({firstName, lastName, DOB, smoker})
+        createUser: async (parent, {firstName, lastName, DOB, smoker, _id}) => {
+            const newUser = await User.create({firstName, lastName, DOB, smoker})
+            return await Account.findByIdAndUpdate(
+                { _id }, 
+                { $push: { Users: newUser } },
+                {new:true}
+            )
         },
         // Med Mutations
         //Create a new med
@@ -45,6 +51,14 @@ const resolvers = {
            return await User.findOneAndUpdate(
                 { _id }, 
                 { $push: { Meds: medication } },
+                {new:true}
+            )
+        },
+        createAllergy: async (parent, {allergin, reaction, _id}) => {
+            const newAllergy = await Allergy.create({allergin, reaction})
+           return await User.findOneAndUpdate(
+                { _id }, 
+                { $push: { Allergies: newAllergy } },
                 {new:true}
             )
         }

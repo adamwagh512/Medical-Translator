@@ -1,16 +1,13 @@
 const {Schema, model} = require ("mongoose")
 
-const medSchema = new Schema (
+const allergySchema = new Schema (
     {
-        medName: {
+        allergin: {
             type: Schema.Types.String,
             required: true
         }, 
-        dose: {
-            type: Schema.Types.Number,
-            required: true
-        },
-        unit: {
+    
+        reaction: {
             type: Schema.Types.String,
             required: true,
 
@@ -19,6 +16,6 @@ const medSchema = new Schema (
    
 )
 
-const Med = model ("Med", medSchema)
+const Allergy = model ("Allergy", allergySchema)
 
-module.exports = Med;
+module.exports = Allergy;

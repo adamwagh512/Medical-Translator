@@ -5,11 +5,11 @@ const Users = require('./User')
 const accountSchema = new Schema (
     {
         email: {
-            type: String,
+            type: Schema.Types.String,
             required: true
         }, 
         password: {
-            type: String,
+            type: Schema.Types.String,
             required: true
         },
         Users: [

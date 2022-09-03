@@ -12,7 +12,7 @@ const userSchema = new Schema (
             required: true
         },
         DOB: {
-            type: Schema.Types.Date,
+            type: Schema.Types.String,
             required: true,
 
         },
@@ -27,6 +27,12 @@ const userSchema = new Schema (
                 ref: 'Med'
         }
         ],
+        Allergies: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Allergy'
+            }
+        ]
     },
     {
         toJSON: {
