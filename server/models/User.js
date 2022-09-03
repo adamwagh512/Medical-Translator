@@ -1,5 +1,6 @@
 const {Schema, model} = require ("mongoose")
 const Med = require('./Med')
+const Contact = require('./Contact')
 
 const userSchema = new Schema (
     {
@@ -31,6 +32,18 @@ const userSchema = new Schema (
             {
                 type: Schema.Types.ObjectId,
                 ref: 'Allergy'
+            }
+        ],
+        Contact: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Contact'
+            }
+        ],
+        Physician: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Physician'
             }
         ]
     },

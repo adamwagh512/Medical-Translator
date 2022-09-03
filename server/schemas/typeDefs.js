@@ -61,7 +61,7 @@ const typeDefs = gql`
     Users: [User]
     Account: [Account]
     Meds: [Med]
-    Allergy: [Allergy]
+    Allergies: [Allergy]
     History: [History]
     Contact: [Contact]
   }
@@ -70,6 +70,8 @@ const typeDefs = gql`
     createUser(firstName: String!, lastName: String!, DOB: String!, smoker: Boolean!, _id: ID!): Account
     createMed(medName: String!, dose: Float!, unit: String!, _id: ID!) : User
     createAllergy(allergin: String!, reaction: String!, _id: ID!) : User
+    createContact(name: String!, email:String!, phone:String!, _id:ID): User
+    createPhysician(name: String!, speciality: String!, email:String!, phone:String!, _id:ID): User
   }
 `;
 module.exports = typeDefs;

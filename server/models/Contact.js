@@ -6,7 +6,6 @@ const contactSchema = new Schema (
             type: Schema.Types.String,
             required: true
         }, 
-
         email: {
             type: Schema.Types.String,
         }, 
