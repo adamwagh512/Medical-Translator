@@ -1,30 +1,69 @@
 const {Schema, model} = require ("mongoose")
+const Med = require('./Med')
+const Contact = require('./Contact')
 
 const userSchema = new Schema (
     {
         firstName: {
-            type: String,
+            type: Schema.Types.String,
             required: true
         }, 
         lastName: {
-            type: String,
+            type: Schema.Types.String,
             required: true
         },
         DOB: {
-            type: String,
+            type: Schema.Types.String,
             required: true,
 
         },
         smoker: {
-            type: Boolean,
+            type: Schema.Types.Boolean,
             required: true
             
         },
+        Meds: [
+            {
+                type:Schema.Types.ObjectId,
+                ref: 'Med'
+        }
+        ],
+        Allergies: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Allergy'
+            }
+        ],
+        Contact: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Contact'
+            }
+        ],
+        Physician: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Physician'
+            }
+        ],
+        History: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'History'
+            }
+        ],
+        Surgery: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Surgery'
+            }
+        ]
     },
     {
         toJSON: {
             virtuals: true
-        }
+        },
+        
     }   
 )
 
