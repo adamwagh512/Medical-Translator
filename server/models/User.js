@@ -63,7 +63,13 @@ const userSchema = new Schema (
                 type: Schema.Types.ObjectId,
                 ref: 'Pain'
             }
-        ]
+        ],
+        Emergency: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Emergency'
+            }
+        ],
     },
     {
         toJSON: {
