@@ -57,6 +57,12 @@ const userSchema = new Schema (
                 type: Schema.Types.ObjectId,
                 ref: 'Surgery'
             }
+        ],
+        Pain: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Pain'
+            }
         ]
     },
     {
