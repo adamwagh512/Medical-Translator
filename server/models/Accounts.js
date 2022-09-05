@@ -10,8 +10,6 @@ const accountSchema = new Schema (
         password: {
             type: Schema.Types.String,
             required: true,
-            
-            
         },
         Users: [
             {

@@ -30,12 +30,13 @@ const resolvers = {
         // Make a new Account
         //Not working yet. Ill come back to it.
         createAccount: async (parent, {email, password}) => {
-            return Account.create({email, password});
+            console.log(email)
+            return Account.create({email: email, password: password});
         },
 
         // Delete an Account 
-        deleteAccount: async (parent, {AccountID}) => {
-            return Account.findOneAndDelete({_id: AccountID})
+        deleteAccount: async (parent, {_id}) => {
+            return Account.findOneAndDelete({_id})
         },
 
 
