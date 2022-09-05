@@ -88,7 +88,7 @@ const typeDefs = gql`
 
   type Mutation {
     createAccount(email: String!, password: String!): Account
-    deleteAccount(_id: ID!): Account
+    deleteAccount(_id: ID): Account
     createUser(firstName: String!, lastName: String!, DOB: String!, smoker: Boolean!, _id: ID!): Account
     deleteUser(_id: ID) : Account
     createMed(medName: String!, dose: Float!, unit: String!, _id: ID!) : User
