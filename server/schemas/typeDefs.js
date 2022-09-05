@@ -90,15 +90,24 @@ const typeDefs = gql`
     createAccount(email: String!, password: String!): Account
     deleteAccount(_id: ID!): Account
     createUser(firstName: String!, lastName: String!, DOB: String!, smoker: Boolean!, _id: ID!): Account
+    deleteUser(_id: ID) : Account
     createMed(medName: String!, dose: Float!, unit: String!, _id: ID!) : User
-    deleteMed(userId: ID!, medId: ID!): User
+    deleteMed(_id: ID!): Med
     createAllergy(allergin: String!, reaction: String!, _id: ID!) : User
+    deleteAllergy(_id: ID!): Allergy
     createContact(name: String!, email:String!, phone:String!, _id:ID): User
+    deleteContact(_id: ID!): Contact
     createPhysician(name: String!, speciality: String!, email:String!, phone:String!, _id:ID): User
+    deletePhysician(_id: ID!): Physician
     createHistory(issue: String!, _id: ID) : User
+    deleteHistory(_id: ID!): History
     createSurgery(description: String!, date: String!, hospital: String!, hospitalCity: String!, surgeon: String!, _id: ID) : User
+    deleteSurgery(_id: ID!): Surgery
     createPain(onset: String!, provocation: String!, quality: String!, location: String!, severity: Int, timing: String!, _id: ID): User
+    deletePain(_id: ID!): Pain
     createEmergency(currentProblem: String!, _id: ID) : User
+    deleteEmergency(_id: ID!): Emergency
+
   }
 `;
 module.exports = typeDefs;
