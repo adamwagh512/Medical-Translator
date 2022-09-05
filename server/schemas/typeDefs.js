@@ -19,6 +19,9 @@ const typeDefs = gql`
     Physician: [Physician]
     Surgery: [Surgery]
     History: [History]
+    Pain: [Pain]
+    Emergency:[Emergency]
+  
   }
   type Med {
     _id: ID
@@ -56,6 +59,19 @@ const typeDefs = gql`
     hospitalCity: String
     surgeon: String
   }
+  type Pain {
+    _id: ID
+    onset: String
+    provocation: String
+    quality: String
+    location: String
+    severity: Int
+    timing: String
+  }
+  type Emergency{
+    _id: ID
+    currentProblem: String
+  }
 
   type Query {
     Users: [User]
@@ -64,16 +80,25 @@ const typeDefs = gql`
     Allergies: [Allergy]
     History: [History]
     Contact: [Contact]
+    Physician: [Physician]
+    Surgery: [Surgery]
+    Pain: [Pain]
+    Emergency: [Emergency]
   }
+
   type Mutation {
-    createAccount(accountId: ID!, email: String!, password: String!): Account
+    createAccount(email: String!, password: String!): Account
+    deleteAccount(accountId: ID!): Account
     createUser(firstName: String!, lastName: String!, DOB: String!, smoker: Boolean!, _id: ID!): Account
     createMed(medName: String!, dose: Float!, unit: String!, _id: ID!) : User
+    deleteMed(userId: ID!, medId: ID!): User
     createAllergy(allergin: String!, reaction: String!, _id: ID!) : User
     createContact(name: String!, email:String!, phone:String!, _id:ID): User
     createPhysician(name: String!, speciality: String!, email:String!, phone:String!, _id:ID): User
     createHistory(issue: String!, _id: ID) : User
     createSurgery(description: String!, date: String!, hospital: String!, hospitalCity: String!, surgeon: String!, _id: ID) : User
+    createPain(onset: String!, provocation: String!, quality: String!, location: String!, severity: Int, timing: String!, _id: ID): User
+    createEmergency(currentProblem: String!, _id: ID) : User
   }
 `;
 module.exports = typeDefs;

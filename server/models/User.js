@@ -1,6 +1,5 @@
 const {Schema, model} = require ("mongoose")
-const Med = require('./Med')
-const Contact = require('./Contact')
+
 
 const userSchema = new Schema (
     {
@@ -57,7 +56,19 @@ const userSchema = new Schema (
                 type: Schema.Types.ObjectId,
                 ref: 'Surgery'
             }
-        ]
+        ],
+        Pain: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Pain'
+            }
+        ],
+        Emergency: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Emergency'
+            }
+        ],
     },
     {
         toJSON: {
