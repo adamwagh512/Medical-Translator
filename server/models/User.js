@@ -1,6 +1,5 @@
 const {Schema, model} = require ("mongoose")
-const Med = require('./Med')
-const Contact = require('./Contact')
+
 
 const userSchema = new Schema (
     {

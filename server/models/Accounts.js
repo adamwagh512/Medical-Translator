@@ -1,6 +1,5 @@
 const {Schema, model} = require ("mongoose")
-const User = require("./User")
-const Users = require('./User')
+
 
 const accountSchema = new Schema (
     {
@@ -10,20 +9,18 @@ const accountSchema = new Schema (
         }, 
         password: {
             type: Schema.Types.String,
-            required: true
+            required: true,
+            
+            
         },
         Users: [
             {
                 type:Schema.Types.ObjectId,
-                ref: 'User'
+                ref: 'User',
+                
         }
         ],
     },
-    {
-        toJSON: {
-            virtuals: true
-        }
-    }   
 )
 
 const Account = model ("Account", accountSchema)
