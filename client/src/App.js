@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import Medical_Questions from "./pages/Medical-Pages/Medical_Questions"
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
