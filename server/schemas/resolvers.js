@@ -1,5 +1,7 @@
 const { User, Account, Med, Allergy, History, Contact, Surgery, Physician, Pain, Emergency } = require('../models');
-
+const deepl = require('deepl-node');
+const authKey = "d9784efc-0947-0fb2-3e1d-9e4d38fd1151:fx"
+const translator = new deepl.Translator(authKey);
 
 const resolvers = {
     Query: {
@@ -202,6 +204,32 @@ const resolvers = {
                  { _id}, 
              )
          },
+         translateText: async (parent, {words, translateFrom, translateTo}) => {
+            try {
+                const translatedText = await translator.translateText(
+                    words,
+                    translateFrom,
+                    translateTo,
+                );
+                console.log(translatedText.text)
+                return {
+                    input: words,
+                    translateFrom,
+                    translateTo,
+                    translatedWords: translatedText.text
+                };
+            } catch (error) {
+                // If the error occurs after the document was already uploaded,
+                // documentHandle will contain the document ID and key
+                if (error.documentHandle) {
+                    const handle = error.documentHandle;
+                    console.log(`Document ID: ${handle.documentId}, ` + `Document key: ${handle.documentKey}`);
+                } else {
+                    console.log(`Error occurred during document upload: ${error}`);
+                }
+            }
+            
+         }
     },
 };
 
