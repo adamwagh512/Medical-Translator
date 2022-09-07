@@ -72,6 +72,12 @@ const typeDefs = gql`
     _id: ID
     currentProblem: String
   }
+  type Translation {
+    input: String
+    translateFrom: String
+    translateTo: String
+    translatedWords: String
+  }
 
   type Query {
     Users: [User]
@@ -107,7 +113,7 @@ const typeDefs = gql`
     deletePain(_id: ID!): Pain
     createEmergency(currentProblem: String!, _id: ID) : User
     deleteEmergency(_id: ID!): Emergency
-
+    translateText(words: String!, translateFrom: String!, translateTo: String!): Translation
   }
 `;
 module.exports = typeDefs;
