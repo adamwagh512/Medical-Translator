@@ -78,7 +78,10 @@ const typeDefs = gql`
     translateTo: String
     translatedWords: String
   }
-
+  type Auth {
+    token: ID!
+    User: User
+  }
   type Query {
     Users: [User]
     Account: [Account]
@@ -90,7 +93,11 @@ const typeDefs = gql`
     Surgery: [Surgery]
     Pain: [Pain]
     Emergency: [Emergency]
+    findSingleUser:User
+    me:User
+    login: Auth
   }
+
 
   type Mutation {
     createAccount(email: String!, password: String!): Account

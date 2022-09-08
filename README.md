@@ -10,12 +10,10 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Feedback](#feedback)
-- [Contributors](#contributors)
 - [Build Process](#build-process)
-- [Team](#teams-)
-- [Sponsors](#sponsors-)
+- [Team](#teams)
 - [Acknowledgments](#acknowledgments)
-
+- [License](#license)
 
 
 
@@ -30,14 +28,16 @@
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
+## Introduction
+Welcome to the F.A.S.T Medical Translator. Our goal with this project is to make an application that makes conveying vital medical information to providers quick and easy, even if you dont speak the same language! Many members of our group have a background in healthcare, and that is why ensuring equal access to emergency medical treatment is such a huge priority for us. I hope you enjoy our app, and be sure to check back often as this is a work in progress!
 
+## Features
+We are currently working hard to impliment the DeepL translation API. Our goal is to translate our entire webpage into one of over twenty languages so users can interact with the site in their native tongue. Our app will also be able to translate the user's information into whichever language the provider speaks. The goal of this project is not to completely replace live translators, but we hope to allow healthcare providers to begin initial patient care with reliable information until additional translation resources can be brought online.
+## Feedback
+Do you have any ideas for improving our app? We would love to hear from you! Please leave us an email [here](adamwagh@gmail.com)
 
-
-
-
-
-
-
+## Acknowledgements 
+There are several people we would like to thank for their invaluable contributions to this project. Ian and Ross were extremely patient and provided an incredible amount of assistance throughout this project. We would also like to acknowledge Stephon who helped us overcome several blockers during this project. Finally we would like to acknowledge tutors Jack Linhart and Andrew New for going above and beyond the call of duty to help us as much as they could. 
 
 
 ## Building Process
@@ -59,7 +59,7 @@ Find out more about how to reach us at
 [Medical-Translator-Team](https://github.com/adamwagh512/Medical-Translator).
 
 
-# Team 👏
+## Team 
 
 Thanks goes to these wonderful people:
 
@@ -82,7 +82,7 @@ Thanks goes to these wonderful people:
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 
-## [License]  
+## License  
  
 MIT © 
 

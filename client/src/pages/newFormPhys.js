@@ -1,4 +1,6 @@
+import { useQuery } from "@apollo/client";
 import React from "react";
+
 // import { useMutation } from "@apollo/client";
 // import { ADD_MEDICAL_HISTORY } from "../../utils/mutations";
 // import {ADD_USER} from "../../utils/mutation"
@@ -22,6 +24,7 @@ import React from "react";
 //     console.error(err);
 //   }
 // };
+
 
 
 return (
@@ -170,6 +173,8 @@ return (
                 </div>
               </div>
             </div>
+
+
             <div className="py-6 border-b border-coolGray-100">
               <div className="w-full md:w-9/12">
                 <div className="flex flex-wrap -m-3">
@@ -185,6 +190,8 @@ return (
                 </div>
               </div>
             </div>
+
+
             <div className="pt-6">
               <div className="w-full md:w-9/12">
                 <div className="flex flex-wrap -m-3">
