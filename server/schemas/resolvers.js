@@ -27,26 +27,26 @@ const resolvers = {
             });
         },
         findSingleUser: async (parent, { UserId }) => {
-            return Profile.findOne({ _id: UserId });
+            return User.findOne({ _id: UserId });
           },
         me: async (parent, args, context) => {
-            return Profile.findOne({_id:context.user._id})
+            return User.findOne({_id:context.user._id})
         },
         login: async (parent, { email, password }) => {
-            const profile = await Profile.findOne({ email });
+            const User = await User.findOne({ email });
       
-            if (!profile) {
-              throw new AuthenticationError('No profile with this email found!');
+            if (!User) {
+              throw new AuthenticationError('No User with this email found!');
             }
       
-            const correctPw = await profile.isCorrectPassword(password);
+            const correctPw = await User.isCorrectPassword(password);
       
             if (!correctPw) {
               throw new AuthenticationError('Incorrect password!');
             }
       
-            const token = signToken(profile);
-            return { token, profile };
+            const token = signToken(User);
+            return { token, User };
           },
     },
     Mutation: {
