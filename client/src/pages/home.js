@@ -1,5 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+// import Logo from "./Logo.png"
 // import { TRANSLATETEXT } from "../utils/mutations";
 // import {useMutation} from '@apollo/client'
 
@@ -20,7 +21,7 @@ export default function Home() {
               <Link className="inline-block mb-6" to="/">
                 <img
                   className="h-16"
-                  src="images/Screenshot-2022-08-18-220026-jpg-1662144026317.webp"
+                  src= ""  
                   alt=""
                 />
               </Link>
@@ -84,7 +85,7 @@ export default function Home() {
               </div>
               <Link
                 className="inline-block py-3 px-7 mb-6 w-full text-base text-green-50 font-medium text-center leading-6 bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md shadow-sm"
-                to="/"
+                to="/PatientIntake"
               >
                 Sign In
               </Link>
@@ -94,7 +95,7 @@ export default function Home() {
                 </span>{" "}
                 <Link
                   className="inline-block text-xs font-medium text-green-500 hover:text-green-600 hover:underline"
-                  to = "Signup"
+                  to="/SignUp"
                 >
                   Sign up
                 </Link>

@@ -1,10 +1,32 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
-import { QUERY_ME } from "../utils/queries";
 
-export default function NewFormPhys () {
-const {loading, data} = useQuery(QUERY_ME)
-console.log(data)
+// import { useMutation } from "@apollo/client";
+// import { ADD_MEDICAL_HISTORY } from "../../utils/mutations";
+// import {ADD_USER} from "../../utils/mutation"
+
+
+// export const medicalHistoryForm = ({userId}) => {
+  export default function medicalHistoryForm() {
+//   const [medicalHistory, setMedicalHistory ] = useState('');
+// const [addMedicalHistory, {error} ] = useMutation(ADD_MEDICAL_HISTORY);
+
+// const handleFormSubmit = async (event) => {
+//   event.preventDefault();
+
+//   try {
+//     const data = await addMedicalHistory({
+//       variables: { userId, medicalHistory },
+//     });
+
+//     setMedicalHistory('');
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+
+
+
 return (
 <div>
       <section className="bg-coolGray-50 py-4">
@@ -19,15 +41,17 @@ return (
                 <div className="w-full md:w-auto p-2">
                   <div className="flex flex-wrap justify-between -m-1.5">
                     <div className="w-full md:w-auto p-1.5">
-                      <button className="flex flex-wrap justify-center w-full px-4 py-2 font-medium text-sm text-coolGray-500 hover:text-coolGray-600 border border-coolGray-200 hover:border-coolGray-300 bg-white rounded-md shadow-button">
+                      <button className="flex flex-wrap justify-center w-full px-4 py-2 font-medium text-sm text-coolGray-500 hover:text-coolGray-600 border border-coolGray-200 hover:border-coolGray-300 bg-white rounded-md shadow-button" src="">
                         <p>Cancel</p>
                       </button>
                     </div>
+                  
                     <div className="w-full md:w-auto p-1.5">
                       <button className="flex flex-wrap justify-center w-full px-4 py-2 bg-green-500 hover:bg-green-600 font-medium text-sm text-white border border-green-500 rounded-md shadow-button">
                         <p>Save</p>
                       </button>
                     </div>
+                   
                   </div>
                 </div>
               </div>
@@ -185,4 +209,5 @@ return (
         </div>
       </section>
     </div>
-)}
+);
+}
