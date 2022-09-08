@@ -1,11 +1,7 @@
 import React from "react";
 
-<<<<<<< HEAD
-export default function PhysicianPage () {
-=======
 export default function PhysicianPage() {
   return (
->>>>>>> main
     <div>
       <section className="bg-coolGray-50 py-4">
         <div className="container px-4 mx-auto">
