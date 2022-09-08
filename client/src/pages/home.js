@@ -1,6 +1,7 @@
 import React from "react";
-import { TRANSLATETEXT } from "../utils/mutations";
-import {useMutation} from '@apollo/client'
+import {Link} from "react-router-dom"
+// import { TRANSLATETEXT } from "../utils/mutations";
+// import {useMutation} from '@apollo/client'
 
 
 export default function Home() {
@@ -16,13 +17,13 @@ export default function Home() {
         <div className="container px-4 mx-auto">
           <div className="max-w-sm mx-auto">
             <div className="mb-6 text-center">
-              <a className="inline-block mb-6" href="#">
+              <Link className="inline-block mb-6" to="/">
                 <img
                   className="h-16"
                   src="images/Screenshot-2022-08-18-220026-jpg-1662144026317.webp"
                   alt=""
                 />
-              </a>
+              </Link>
               <h3 className="mb-4 text-2xl md:text-3xl font-bold">
                 Welcome to F.A.S.T
               </h3>
@@ -73,41 +74,41 @@ export default function Home() {
                   </label>
                 </div>
                 <div className="w-full md:w-auto mt-1">
-                  <a
+                  <Link
                     className="inline-block text-xs font-medium text-green-500 hover:text-green-600"
-                    href="#"
+                    to="/Signup"
                   >
                     Forgot your password?
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <a
+              <Link
                 className="inline-block py-3 px-7 mb-6 w-full text-base text-green-50 font-medium text-center leading-6 bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md shadow-sm"
-                href="#"
+                to="/"
               >
                 Sign In
-              </a>
+              </Link>
               <p className="text-center">
                 <span className="text-xs font-medium">
                   Don't have an account?
                 </span>{" "}
-                <a
+                <Link
                   className="inline-block text-xs font-medium text-green-500 hover:text-green-600 hover:underline"
-                  href="signup.html"
+                  to = "Signup"
                 >
                   Sign up
-                </a>
+                </Link>
               </p>
             </form>
           </div>
         </div>
       </section>
-      <a
+      <Link
         className="inline-block py-3 px-7 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
-        href="userlanguageselect.html"
+        to="/LanguageSelect"
       >
         Select Another Language
-      </a>
+      </Link>
     </div>
   );
 }
