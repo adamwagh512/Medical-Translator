@@ -33,7 +33,7 @@ function App() {
               element={<LanguageSelect />}
             />
             <Route
-              path="/NewForPhsy"
+              path="/NewFormPhys"
               element={<NewFormPhys />}
             />
             <Route

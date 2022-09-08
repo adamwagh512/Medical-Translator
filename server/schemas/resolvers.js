@@ -25,7 +25,29 @@ const resolvers = {
                 path: 'Users',
                 populate:['Meds', 'Allergies', 'Contact', 'Physician', 'History','Surgery', 'Pain', 'Emergency'],
             });
-        }
+        },
+        findSingleUser: async (parent, { UserId }) => {
+            return Profile.findOne({ _id: UserId });
+          },
+        me: async (parent, args, context) => {
+            return Profile.findOne({_id:context.user._id})
+        },
+        login: async (parent, { email, password }) => {
+            const profile = await Profile.findOne({ email });
+      
+            if (!profile) {
+              throw new AuthenticationError('No profile with this email found!');
+            }
+      
+            const correctPw = await profile.isCorrectPassword(password);
+      
+            if (!correctPw) {
+              throw new AuthenticationError('Incorrect password!');
+            }
+      
+            const token = signToken(profile);
+            return { token, profile };
+          },
     },
     Mutation: {
 // Account Mutations

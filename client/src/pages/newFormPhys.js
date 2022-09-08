@@ -1,6 +1,10 @@
+import { useQuery } from "@apollo/client";
 import React from "react";
+import { QUERY_ME } from "../utils/queries";
 
 export default function NewFormPhys () {
+const {loading, data} = useQuery(QUERY_ME)
+console.log(data)
 return (
 <div>
       <section className="bg-coolGray-50 py-4">
@@ -145,6 +149,8 @@ return (
                 </div>
               </div>
             </div>
+
+
             <div className="py-6 border-b border-coolGray-100">
               <div className="w-full md:w-9/12">
                 <div className="flex flex-wrap -m-3">
@@ -160,6 +166,8 @@ return (
                 </div>
               </div>
             </div>
+
+
             <div className="pt-6">
               <div className="w-full md:w-9/12">
                 <div className="flex flex-wrap -m-3">
