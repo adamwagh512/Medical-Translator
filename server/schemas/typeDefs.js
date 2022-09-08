@@ -80,7 +80,7 @@ const typeDefs = gql`
   }
   type Auth {
     token: ID!
-    profile: Profile
+    User: User
   }
   type Query {
     Users: [User]
@@ -95,7 +95,9 @@ const typeDefs = gql`
     Emergency: [Emergency]
     findSingleUser:User
     me:User
+    login: Auth
   }
+
 
   type Mutation {
     createAccount(email: String!, password: String!): Account
