@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom"
 export default function PatientIntake() {
   return (
     <div>
@@ -26,12 +26,12 @@ export default function PatientIntake() {
                 <h2 className="text-lg font-semibold">User Selection</h2>
               </div>
               <div className="w-auto p-2">
-                <a
+                <Link
                   className="text-sm text-green-500 hover:text-green-600 font-semibold"
-                  href="#"
+                  to="/PatientIntake"
                 >
                   See all
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex flex-wrap">
@@ -152,12 +152,12 @@ export default function PatientIntake() {
           {" "}
         </div>
       </div>
-      <a
+      <Link
         className="inline-block py-3 px-7 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
-        href="#"
+        to="/NewFormPhys"
       >
         Add a New Member
-      </a>
+      </Link>
     </div>
   );
 }

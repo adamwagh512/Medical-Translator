@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 export default function PhysicianPage() {
   return (
@@ -266,12 +267,12 @@ export default function PhysicianPage() {
           </div>
         </div>
       </section>
-      <a
+      <Link
         className="inline-block py-3 px-7 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
-        href="newformphys.html"
+        to="/NewFormPhys"
       >
         Create New Form
-      </a>
+      </Link>
     </div>
   );
 }
