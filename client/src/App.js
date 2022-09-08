@@ -55,6 +55,11 @@ function App() {
               element={<PhysicianPage />}
             />
 
+             <Route
+              path="/LanguageSelect"
+              element={<LanguageSelect />}
+            />
+
           </Routes>
         </div>
       
