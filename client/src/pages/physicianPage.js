@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function physicianPage () {
+export default function PhysicianPage () {
     <div>
     <section className="bg-coolGray-50 py-4">
       <div className="container px-4 mx-auto">
