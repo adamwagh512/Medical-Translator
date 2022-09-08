@@ -23,9 +23,9 @@ function App() {
         <div className="container">
           {/* <Home /> */}
 
-          {/* <LanguageSelect /> */}
+          <LanguageSelect />
 
-          <NewFormPhys />
+          {/* <NewFormPhys /> */}
 
         {/* <PatientIntake />
 
