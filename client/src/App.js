@@ -8,7 +8,7 @@ import NewFormPhys from "./pages/NewFormPhys";
 import PatientIntake from "./pages/PatientIntake";
 import PatientPortal from "./pages/PatientPortal";
 import PhysicianPage from "./pages/PhysicianPage";
-import Signup from "./pages/Signup";
+import SignUp from "./pages/SignUp"
 
 function App() {
   const client = new ApolloClient({
@@ -25,15 +25,15 @@ function App() {
               element={<Home />}
             />
             <Route
-              path="/Signup"
-              element={<Signup />}
+              path="/SignUp"
+              element={<SignUp />}
             />
             <Route
               path="/LanguageSelect"
               element={<LanguageSelect />}
             />
             <Route
-              path="/NewForPhsy"
+              path="/NewFormPhys"
               element={<NewFormPhys />}
             />
             <Route

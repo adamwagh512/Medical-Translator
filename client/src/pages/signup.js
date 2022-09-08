@@ -114,7 +114,7 @@ export default function Signup() {
                   </span>{" "}
                   <Link
                     className="inline-block text-xs font-medium text-green-500 hover:text-green-600 hover:underline"
-                    to="/"
+                    to="/NewFormPhys"
                   >
                     Sign In
                   </Link>
