@@ -6,8 +6,8 @@ import Home from "./pages/Home";
 import LanguageSelect from "./pages/LanguageSelect";
 import NewFormPhys from "./pages/newFormPhys";
 import PatientIntake from "./pages/patientIntake";
-import PatientPortal from "./pages/patientPortal";
-import PhysicianPage from "./pages/physicianPage";
+import PatientPortal from "./pages/PatientPortal";
+import PhysicianPage from "./pages/PhysicianPage";
 import Signup from "./pages/Signup";
 
 function App() {
@@ -19,21 +19,21 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <Signup />
+        {/* <Signup /> */}
         <div className="container">
-          <Home />
+          {/* <Home /> */}
 
           {/* <LanguageSelect /> */}
 
-          {/* <NewFormPhys />
+          {/* <NewFormPhys /> */}
 
-        <PatientIntake />
+        {/* <PatientIntake /> */}
 
-        <PatientPortal />
+        {/* <PatientPortal /> */}
 
         <PhysicianPage />
 
-        <Medical_Questions /> */}
+        {/* <Medical_Questions /> */}
         </div>
       </div>
     </ApolloProvider>
