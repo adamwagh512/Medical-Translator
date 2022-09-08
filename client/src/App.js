@@ -1,7 +1,7 @@
 // import './App.css';
 import Medical_Questions from "./pages/Medical-Pages/Medical_Questions";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-
+import { Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
 import LanguageSelect from "./pages/LanguageSelect";
 import NewFormPhys from "./pages/NewFormPhys";
@@ -18,28 +18,48 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <div className="App">
-        {/* <Signup /> */}
+      <Router>
         <div className="container">
-          {/* <Home /> */}
 
-          {/* <LanguageSelect /> */}
+          <Routes>
+            <Route
+              path="/"
+              element={<Home />}
+            />
+            <Route
+              path="/Signup"
+              element={<Signup />}
+            />
 
+            <Route
+              path="/LanguageSelect"
+              element={<LanguageSelect />}
+            />
+            <Route
+              path="/NewForPhsy"
+              element={<NewFormPhys />}
+            />
 
-          <NewFormPhys />
+            <Route
+              path="/PatientIntake"
+              element={<PatientIntake />}
+            />
 
-        {/* <PatientIntake />
+            <Route
+              path="/PatientPortal"
+              element={<PatientPortal />}
+            />
 
+            <Route
+              path="/PhysicianPage"
+              element={<PhysicianPage />}
+            />
 
-        {/* <PatientPortal /> */}
-
-        <PhysicianPage />
-
-        <Medical_Questions />  */}
-
+          </Routes>
         </div>
-      </div>
-    </ApolloProvider>
+      
+        </Router>
+        </ApolloProvider >
   );
 }
 
