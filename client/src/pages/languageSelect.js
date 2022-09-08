@@ -1,20 +1,37 @@
 import React from "react";
+<<<<<<< HEAD
 import {Link} from 'react-router-dom'
+=======
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
 
 export default function LanguageSelect() {
   return (
     <div>
       <section
         className="relative bg-white overflow-hidden"
+<<<<<<< HEAD
         style={{backgroundImage: "url('flex-ui-assets/elements/pattern-white.svg')", backgroundPosition:" center;"}}
       >
+=======
+        style={{
+            backgroundImage: "url('flex-ui-assets/elements/pattern-white.svg')", 
+            backgroundPosition: "center",
+        }}
+        >
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
         <div className="bg-tarnsparent">
           <nav className="flex justify-between p-6 px-4">
             <div className="flex justify-between items-center w-full">
               <div className="w-1/2 xl:w-1/3">
+<<<<<<< HEAD
                 <Link className="block max-w-max" to="">
                   <img className="h-8" src="images/logo12.PNG" alt="" />
                 </Link>
+=======
+                <a className="block max-w-max" href="#">
+                  <img className="h-8" src="images/logo12.PNG" alt="" />
+                </a>
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
               </div>
               <div className="w-1/2 xl:w-1/3"> </div>
               <div className="w-1/2 xl:w-1/3">
@@ -25,7 +42,11 @@ export default function LanguageSelect() {
               <svg
                 width="35"
                 height="35"
+<<<<<<< HEAD
                 viewbox="0 0 32 32"
+=======
+                viewBox="0 0 32 32"
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -48,12 +69,17 @@ export default function LanguageSelect() {
             <div className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
               <nav className="relative p-6 h-full overflow-y-auto">
                 <div className="flex flex-col justify-between h-full">
+<<<<<<< HEAD
                   <Link className="inline-block" to="">
+=======
+                  <a className="inline-block" href="#">
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
                     <img
                       className="h-8"
                       src="flex-ui-assets/logos/flex-ui-green-light.svg"
                       alt=""
                     />
+<<<<<<< HEAD
                   </Link>
                   <ul className="py-6">
                     <li>
@@ -87,10 +113,46 @@ export default function LanguageSelect() {
                       >
                         Resources
                       </Link>
+=======
+                  </a>
+                  <ul className="py-6">
+                    <li>
+                      <a
+                        className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                        href="#"
+                      >
+                        Product
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                        href="#"
+                      >
+                        Features
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                        href="#"
+                      >
+                        Pricing
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                        href="#"
+                      >
+                        Resources
+                      </a>
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
                     </li>
                   </ul>
                   <div className="flex flex-wrap">
                     <div className="w-full mb-2">
+<<<<<<< HEAD
                       <Link
                         className="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md"
                         to="#"
@@ -105,15 +167,39 @@ export default function LanguageSelect() {
                       >
                         Sign Up
                       </Link>
+=======
+                      <a
+                        className="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md"
+                        href="#"
+                      >
+                        Log In
+                      </a>
+                    </div>
+                    <div className="w-full">
+                      <a
+                        className="inline-block py-2 px-4 w-full text-sm leading-5 text-white bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
+                        href="#"
+                      >
+                        Sign Up
+                      </a>
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
                     </div>
                   </div>
                 </div>
               </nav>
+<<<<<<< HEAD
               <Link className="navbar-close absolute top-5 p-4 right-3" to="#">
                 <svg
                   width="12"
                   height="12"
                   viewbox="0 0 12 12"
+=======
+              <a className="navbar-close absolute top-5 p-4 right-3" href="#">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -122,7 +208,11 @@ export default function LanguageSelect() {
                     fill="#556987"
                   ></path>
                 </svg>
+<<<<<<< HEAD
               </Link>
+=======
+              </a>
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
             </div>
           </div>
         </div>
@@ -136,6 +226,7 @@ export default function LanguageSelect() {
                 <div className="flex flex-wrap">
                   <div className="w-full md:w-auto py-1 md:py-0 md:mr-4"></div>
                   <div className="w-full md:w-auto py-1 md:py-0">
+<<<<<<< HEAD
                     <Link
                 
                       className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-coolGray-800 font-medium text-center bg-white hover:bg-coolGray-100 focus:ring-2 focus:ring-coolGray-200 focus:ring-opacity-50 border border-coolGray-200 rounded-md shadow-sm"
@@ -143,6 +234,14 @@ export default function LanguageSelect() {
                     >
                       English
                     </Link>
+=======
+                    <a
+                      className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-coolGray-800 font-medium text-center bg-white hover:bg-coolGray-100 focus:ring-2 focus:ring-coolGray-200 focus:ring-opacity-50 border border-coolGray-200 rounded-md shadow-sm"
+                      href="patientintakepage.html"
+                    >
+                      English
+                    </a>
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
                   </div>
                 </div>
               </div>
@@ -150,12 +249,20 @@ export default function LanguageSelect() {
                 <div className="relative mx-auto md:mr-0 max-w-max">
                   <img
                     className="absolute z-10 -left-14 -top-12 w-28 md:w-auto"
+<<<<<<< HEAD
                     src="/src/flex-ui-assets/elements/circle3-yellow.svg"
+=======
+                    src="flex-ui-assets/elements/circle3-yellow.svg"
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
                     alt=""
                   />
                   <img
                     className="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto"
+<<<<<<< HEAD
                     src="/src/flex-ui-assets/elements/dots3-blue.svg"
+=======
+                    src="flex-ui-assets/elements/dots3-blue.svg"
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
                     alt=""
                   />
                   <img
@@ -169,6 +276,7 @@ export default function LanguageSelect() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       <Link
         className="inline-block py-3 px-7 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
         to="/PatientIntake"
@@ -193,6 +301,34 @@ export default function LanguageSelect() {
       >
         Japanese
       </Link>
+=======
+      <a
+        className="inline-block py-3 px-7 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
+        href="#"
+      >
+        Romanian
+      </a>
+      <a
+        className="inline-block py-3 px-7 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
+        href="#"
+      >
+        Japanese
+      </a>
+      <a
+        className="inline-block py-3 px-7 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
+        href="#"
+      >
+        Spanish
+      </a>
+
+      <a
+        className="inline-block py-3 px-7 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
+        href="#"
+      >
+        Russian
+      </a>
+      
+>>>>>>> 5e3a9787556e2cd274f1899f2e34809039d35769
       
     </div>
   );
