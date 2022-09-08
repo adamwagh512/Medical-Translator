@@ -1,4 +1,7 @@
 import React from "react";
+import { TRANSLATETEXT } from "../utils/mutations";
+import {useMutation} from '@apollo/client'
+
 
 export default function Home() {
   return (
