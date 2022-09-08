@@ -1,26 +1,19 @@
 import React from "react";
-
 import {Link} from 'react-router-dom'
-
-
 export default function LanguageSelect() {
   return (
     <div>
       <section
         className="relative bg-white overflow-hidden"
-
         style={{backgroundImage: "url('flex-ui-assets/elements/pattern-white.svg')", backgroundPosition:" center;"}}
       >
-
         <div className="bg-tarnsparent">
           <nav className="flex justify-between p-6 px-4">
             <div className="flex justify-between items-center w-full">
               <div className="w-1/2 xl:w-1/3">
-
                 <Link className="block max-w-max" to="">
                   <img className="h-8" src="images/logo12.PNG" alt="" />
                 </Link>
-
               </div>
               <div className="w-1/2 xl:w-1/3"> </div>
               <div className="w-1/2 xl:w-1/3">
@@ -31,9 +24,7 @@ export default function LanguageSelect() {
               <svg
                 width="35"
                 height="35"
-
                 viewbox="0 0 32 32"
-
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -56,15 +47,12 @@ export default function LanguageSelect() {
             <div className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
               <nav className="relative p-6 h-full overflow-y-auto">
                 <div className="flex flex-col justify-between h-full">
-
                   <Link className="inline-block" to="">
-
                     <img
                       className="h-8"
                       src="flex-ui-assets/logos/flex-ui-green-light.svg"
                       alt=""
                     />
-
                   </Link>
                   <ul className="py-6">
                     <li>
@@ -98,12 +86,10 @@ export default function LanguageSelect() {
                       >
                         Resources
                       </Link>
-
                     </li>
                   </ul>
                   <div className="flex flex-wrap">
                     <div className="w-full mb-2">
-
                       <Link
                         className="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md"
                         to="#"
@@ -118,18 +104,15 @@ export default function LanguageSelect() {
                       >
                         Sign Up
                       </Link>
-
                     </div>
                   </div>
                 </div>
               </nav>
-
               <Link className="navbar-close absolute top-5 p-4 right-3" to="#">
                 <svg
                   width="12"
                   height="12"
                   viewbox="0 0 12 12"
-
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -139,23 +122,38 @@ export default function LanguageSelect() {
                   ></path>
                 </svg>
               </Link>
-
+            </div>
+          </div>
+        </div>
+        <div className="py-20 md:py-28">
+          <div className="container px-4 mx-auto">
+            <div className="flex flex-wrap xl:items-center -mx-4">
+              <div className="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+                <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tight">
+                  Select Your Language
+                </h1>
+                <div className="flex flex-wrap">
+                  <div className="w-full md:w-auto py-1 md:py-0 md:mr-4"></div>
+                  <div className="w-full md:w-auto py-1 md:py-0">
                     <Link
-                
                       className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-coolGray-800 font-medium text-center bg-white hover:bg-coolGray-100 focus:ring-2 focus:ring-coolGray-200 focus:ring-opacity-50 border border-coolGray-200 rounded-md shadow-sm"
                       to="/PatientIntake"
                     >
                       English
+                    </Link>
                   </div>
                 </div>
               </div>
               <div className="w-full md:w-1/2 px-4">
-   
+                <div className="relative mx-auto md:mr-0 max-w-max">
+                  <img
+                    className="absolute z-10 -left-14 -top-12 w-28 md:w-auto"
+                    src="/src/flex-ui-assets/elements/circle3-yellow.svg"
+                    alt=""
+                  />
                   <img
                     className="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto"
-
                     src="/src/flex-ui-assets/elements/dots3-blue.svg"
-
                     alt=""
                   />
                   <img
@@ -193,8 +191,6 @@ export default function LanguageSelect() {
       >
         Japanese
       </Link>
-
-      
     </div>
   );
 }
