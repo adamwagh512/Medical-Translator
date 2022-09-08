@@ -4,7 +4,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 import Home from "./pages/Home";
 import LanguageSelect from "./pages/LanguageSelect";
-import NewFormPhys from "./pages/newFormPhys";
+import NewFormPhys from "./pages/NewFormPhys";
 import PatientIntake from "./pages/patientIntake";
 import PatientPortal from "./pages/PatientPortal";
 import PhysicianPage from "./pages/PhysicianPage";
@@ -25,15 +25,18 @@ function App() {
 
           {/* <LanguageSelect /> */}
 
-          {/* <NewFormPhys /> */}
 
-        {/* <PatientIntake /> */}
+          <NewFormPhys />
+
+        {/* <PatientIntake />
+
 
         {/* <PatientPortal /> */}
 
         <PhysicianPage />
 
-        {/* <Medical_Questions /> */}
+        <Medical_Questions />  */}
+
         </div>
       </div>
     </ApolloProvider>
