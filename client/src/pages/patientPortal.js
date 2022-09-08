@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function patientPortal () {
+export default function PatientPortal () {
 
  <div className="align-middle">
  <section className="bg-coolGray-50 py-4">
