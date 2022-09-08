@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function newFormPhys () {
+export default function NewFormPhys () {
 
 <div>
       <section className="bg-coolGray-50 py-4">
